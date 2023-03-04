@@ -12,7 +12,7 @@ COPY package*.json ./
 RUN npm ci
 
 # Download the web server
-npm intall -g serve
+RUN npm install -g serve
 
 # Copy the remaining source code and build it
 COPY . .
