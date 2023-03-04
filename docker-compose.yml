@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+    visualizer:
+        build: .
+        volumes:
+            - '/var/run/docker.soc:/var/run/docker.sock'
+        ports:
+            - '3000:3000'
