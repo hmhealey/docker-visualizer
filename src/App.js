@@ -1,26 +1,26 @@
 import Link from '@mui/joy/Link';
 
+import Header from './components/header';
 import ThemeProvider from './components/theme_provider';
 
-import './App.css';
+import Body from './components/body';
 
 export default function App() {
     return (
         <ThemeProvider>
-            <div className='App'>
-                <header className='App-header'>
-                    <p>
-                        Edit <code>src/App.js</code> and save to reload.
-                    </p>
-                    <Link
-                        href='https://reactjs.org'
-                        target='_blank'
-                        rel='noopener noreferrer'
-                    >
-                        Learn React
-                    </Link>
-                </header>
-            </div>
+            <Header />
+            <Body>
+                <p>Lorem ipsum something</p>
+                <p>Lorem ipsum something</p>
+                <p>Lorem ipsum something</p>
+                <Link
+                    href='https://reactjs.org'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                >
+                    Learn React
+                </Link>
+            </Body>
         </ThemeProvider>
     );
 }
