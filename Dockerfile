@@ -11,13 +11,10 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm ci
 
-# Download the web server
-RUN npm install -g serve
-
 # Copy the remaining source code and build it
 COPY . .
 RUN npm run build
 
 # Run the web server on port 3000
 EXPOSE 3000
-CMD ["serve", "-s", "build"]
+CMD ["node", "scripts/server.js"]
