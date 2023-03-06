@@ -1,6 +1,7 @@
 import Link from '@mui/joy/Link';
 
-import Header from './components/header';
+import Body from './components/layout/body';
+import Header from './components/layout/header';
 import ThemeProvider from './components/theme_provider';
 
 import Body from './components/body';
