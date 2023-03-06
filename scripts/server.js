@@ -39,9 +39,13 @@ function transformContainers(containers, services) {
             name: container.Names[0],
             state: container.State,
             status: container.Status,
-            url: service?.Spec.Labels['ca.hmhealey.visualizer.url'],
+            url: getLabel('ca.hmhealey.visualizer.url', container, service),
         };
     });
+}
+
+function getLabel(label, container, service) {
+    return container.Labels[label] ?? service?.Spec.Labels[label] ?? '';
 }
 
 function runServer() {
