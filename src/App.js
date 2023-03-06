@@ -1,5 +1,4 @@
 import {useEffect, useState} from 'react';
-import Link from '@mui/joy/Link';
 
 import Body from './components/layout/body';
 import Header from './components/layout/header';
@@ -43,16 +42,6 @@ export default function App() {
                 {containers.map((container) => (
                     <ContainerCard container={container} />
                 ))}
-                <p>Lorem ipsum something</p>
-                <p>Lorem ipsum something</p>
-                <p>Lorem ipsum something</p>
-                <Link
-                    href='https://reactjs.org'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                >
-                    Learn React
-                </Link>
             </Body>
         </ThemeProvider>
     );
